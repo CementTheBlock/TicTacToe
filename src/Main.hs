@@ -11,18 +11,25 @@ import TicTacToe
 --initBoard
 --yourTurn
 
-promptMove :: Board -> IO Int
-promptMove b = do putStrLn (yourTurn b)
-		  putStrLn "Where do you want to go?"
-		  x <- getLine
-		  return (read x :: Int)
+-- b = initBoard
+-- print board with coord system
+-- while not (gameOver b)
+       -- print b
+       -- output yourTurn b
+       -- n = input
+       -- if move b n = Nothing
+              -- print "Please make sure your number is between 0 and 9 and specifies an empty space."
+              -- continue
+       -- if move b n = Just nb
+              -- b = nb
+--if tie b output "Tie"
+--else output playerToString winner b
 
---game :: (Board, Bool) -> IO ()
---game (x,p) = do mv <- promptMove x
---	        if p then game (move x mv, gameOver (move x mv)) else if tie x then print "Tie" else print (show (winner x))
+game::IO ()
+game = _
 
-main = do putStrLn "1 | 2 | 3"
-	  putStrLn "__|___|__"
-	  putStrLn "4 | 5 | 6"
-	  putStrLn "__|___|__"
-	  putStrLn "7 | 8 | 9"
+main:: IO ()
+main = do putStrLn "0 | 1 | 2"
+          putStrLn "3 | 4 | 5"
+          putStrLn "6 | 7 | 8"
+          game
